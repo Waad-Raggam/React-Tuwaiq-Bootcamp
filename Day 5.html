@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="greeting()">Click to run</button>
+    <script>
+        // array of objects
+        const students = [
+            {
+                'id': 0,
+                'name': 'Waad',
+                'city': 'jeddah',
+            },
+            {
+                'id': 1,
+                'name': 'Raggam',
+                'city': 'riyadh'
+            },
+        ]
+
+        // how to access array of object elements
+        // 1-
+        console.log(students[0]);
+        console.log(students[0].name);
+        console.log(students);
+        console.table(students);
+
+        // 2- using a for loop
+        for (let i = 0; i < students.length; i++) {
+            const element = students[i];
+            // or
+            console.table(students[i].name);
+        }
+
+        // 3- using forEach
+        students.forEach(function name(params) {
+            console.log("using foreach "+params.name);
+            alert(params.name + " " + params.age);
+        });
+
+        // functions
+        function greeting(params) {
+            alert("Welcome");
+        }
+    </script>
+</body>
+
+</html>
